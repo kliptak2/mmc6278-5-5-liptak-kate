@@ -19,21 +19,19 @@ form.onsubmit = function(capture) {
     listEl.appendChild(li);
 }
 
-// execute a function when user clicks on list items
-function listClicks(){
-// add strikethrough when list item is clicked. Use onclick
-// if list item has a strikethrough when clicked, remove it from list
-
+// add strikethrough when user clicks on button
+li.onclick = function(){
+    if(this.classList.contains("strikethrough")){
+        // if user clicks button again, remove it from the list
+        li.removeChild//something
+    } else {
+        this.classList.add("strikethough")
+    }
 }
 
 
-
-
-//*************** To Do *********************
-// look up form.children (gives an array of children)
-
-
 // NOTES
+// look up form.children (gives an array of children)
 
 // Clear out data - Manual Way
 // form.onsubmit = function (e){
