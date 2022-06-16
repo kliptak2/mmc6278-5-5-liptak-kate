@@ -8,19 +8,20 @@ form.onsubmit = function(capture) {
     capture.preventDefault()
     var data = document.querySelector("input").value   // could I use form.value?
     console.log(data)
-    // generate li element
-    var li = document.createElement("li");
-    // append li to ul#todo-list
-    listEl.appendChild(li);
-    // generate button & put it in li element
+    // generate button
     var btn = document.createElement("button");
     btn.innerHTML = data;
+    // generate li element
+    var li = document.createElement("li");
+    // put button in li element
     li.appendChild(button);
+    // append li to ul#todo-list
+    listEl.appendChild(li);
 }
 
 // execute a function when user clicks on list items
 function listClicks(){
-// add strikethrough when list item is clicked. Use onclick event
+// add strikethrough when list item is clicked. Use onclick
 // if list item has a strikethrough when clicked, remove it from list
 
 }
