@@ -1,9 +1,14 @@
 // list global variables
 var form = document.getElementById("add-todo")
 var listEl = document.getElementById("todo-list")
-// function onlySpaces(str) {
-//     return /^\s*$/.test(str);
-//   }
+var userInputs = document.getElementsByTagName("input")
+
+function onlySpaces() {
+    var userInput = userInputs[0].value;
+    if (userInput === "" || /^\s*$/.test(userInput)) {
+        return true;
+    }
+  }
 
 // capture user inputs                       
 form.onsubmit = function(capture) {
@@ -12,7 +17,7 @@ form.onsubmit = function(capture) {
     var data = document.querySelector("input").value   // could I use form.value?
     console.log(data)
     // check that data isn't blank
-    if(!data || onlySpaces()) return
+    if(!data || onlySpaces() === true) return
 
     // generate li element
     var li = document.createElement("li");
